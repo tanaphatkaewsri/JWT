@@ -24,7 +24,7 @@ JWT , APi with JWT for Authentication in Node.js
 
 What is JWT and Why Should You Use JWT
 -JWT
-    -JWT is Authorization not Authentication
+    -JWT is Authorization not Authentication ***
         -Authentication = username, password
         -Authorization = check is the same user request (that login already), and role that user (login already) can do
     -normally we use session ID for Authorization send it to cookies of the browser
