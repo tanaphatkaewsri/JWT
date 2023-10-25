@@ -28,7 +28,7 @@ What is JWT and Why Should You Use JWT
         -Authentication = username, password
         -Authorization = check is the same user request (that login already), and role that user (login already) can do
     -normally we use session ID for Authorization send it to cookies of the browser
-        -JWT use JSON web token instead cookies to do Authorization
+        -JWT use JSON web token instead sessionID to do Authorization
 -How JWT generate token
     -component of token
         -check token with hash the signature path (encrypt header + encrypt payload + secret_key) -> hash value (digest) it's gonna be match 100% from token that come -> mean no one edit it
