@@ -35,7 +35,18 @@ What is JWT and Why Should You Use JWT
 -Use case
     -login in one sever -> allow to access another server (that relate and permit the first server) and it's will be still safe (both of server know secret_key)
 
-https://www.youtube.com/watch?v=Ud5xKCYQTjM
+User Authentication - Password Login
+-start project
+    -install dependencies express bcrypt
+-create server.js with express
+-install extension REST Client -> working with file 'request.rest'
+-POST user, password
+-use bcryptjs to hashing necessary data for prevent
+    -create salt -> hash password
+-create login route
+-POST login route
+    -use bcrypt compare
+
 https://www.youtube.com/watch?v=mbsmsi7l3r4&t=1s
 
 JWT Authentication Tutorial
