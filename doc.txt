@@ -20,3 +20,8 @@ JWT , APi with JWT for Authentication in Node.js
     -or thunder client
 -make http request and add body data with json
 -create middleware for Authentication
+    -when auth pass show message
+
+JWT Authentication Tutorial
+-start project
+    -nstall dependencies
