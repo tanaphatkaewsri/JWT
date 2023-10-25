@@ -1,0 +1,22 @@
+JWT , APi with JWT for Authentication in Node.js
+-start project
+-download dependencies
+    -bcryptjs (use to hash and compare password by use bcrypt hashing algorithm)
+        -random salt (random number and mix in password before hashing)
+        -cost factor = 10 -> measure how many rounds of processing algorithm working
+    -dotenv (use for stored data in .env file to another file want to fetch)
+    -express
+    -jsonwebtoken
+    -mongoose
+    -nodemon (dev dependencies)
+-create nodejs server and connect database
+    -connect with database uri -> go to find uri in clound mongodb
+    -create could mongodb -> connect with uri (dot forget add password)
+-create user model and route
+    -create schema = logic structure and design of database (ex table structure, relationship, security, etc)
+        -mean the way to organize and control data within the database
+-create route for register and login
+-install postman -> for test API req/res
+    -or thunder client
+-make http request and add body data with json
+-create middleware for Authentication
