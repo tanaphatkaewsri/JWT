@@ -22,6 +22,25 @@ JWT , APi with JWT for Authentication in Node.js
 -create middleware for Authentication
     -when auth pass show message
 
+What is JWT and Why Should You Use JWT
+-JWT
+    -JWT is Authorization not Authentication
+        -Authentication = username, password
+        -Authorization = check is the same user request (that login already), and role that user (login already) can do
+    -normally we use session ID for Authorization send it to cookies of the browser
+        -JWT use JSON web token instead cookies to do Authorization
+-How JWT generate token
+    -component of token
+        -check token with hash the signature path (encrypt header + encrypt payload + secret_key) -> hash value (digest) it's gonna be match 100% from token that come -> mean no one edit it
+-Use case
+    -login in one sever -> allow to access another server (that relate and permit the first server) and it's will be still safe (both of server know secret_key)
+
+https://www.youtube.com/watch?v=Ud5xKCYQTjM
+https://www.youtube.com/watch?v=mbsmsi7l3r4&t=1s
+
 JWT Authentication Tutorial
 -start project
-    -nstall dependencies
+    -install dependencies
+-create server with express
+-use extension REST Client
+    -use JWT for not let everyone access POST API unless user
