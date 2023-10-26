@@ -47,11 +47,17 @@ User Authentication - Password Login
 -POST login route
     -use bcrypt compare
 
-https://www.youtube.com/watch?v=mbsmsi7l3r4&t=1s
-
 JWT Authentication Tutorial
 -start project
-    -install dependencies
+    -install dependencies (express jsonwebtoken dotenv)
+        -save-dev nodemon
 -create server with express
--use extension REST Client
-    -use JWT for not let everyone access POST API unless user
+-use extension REST Client -> working with file.rest
+    -use JWT for not let everyone access POST API unless user login
+-authentication our request -> use JWT
+-app.use(express.json()) ** make app use json from the body that get pass to inside request
+-generate secret key with node->crypto lib->randomBytes(64)toString(hex)
+    -for token and refresh token
+-create middleware for authentication token
+-create refresh token -> for more secure and remove token when logout  (for cant use refresh token anymore)
+    -create auth server for work separately
