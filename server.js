@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: "secret-key",
     resave: false,
     saveUninitialized: false,
   })
@@ -34,14 +34,17 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("login.ejs", { message: req.flash("error") });
+  res.render("login.ejs", {
+    message: req.flash("error"),
+    title: "you come bro?",
+  });
 });
 app.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
-    failureMessage: true,
+    failureFlash: true,
   })
 );
 
