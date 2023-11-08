@@ -11,15 +11,13 @@ const session = require("express-session");
 
 const initializePassport = require("./passport-config");
 initializePassport(passport, (email) => {
-//   console.log("come for find email");
-  users.find((user) => user.email === email);  
-  console.log('you find user bro?', users.find((user) => user.email === email));
+  users.find((user) => user.email === email);
 });
 
 const users = [];
 
 app.set("view-engine", "ejs");
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 app.use(
   session({
@@ -36,9 +34,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render("login.ejs");
+  res.render("login.ejs", { message: req.flash("error") });
 });
-// app.post("/login", (res, req) => {});
 app.post(
   "/login",
   passport.authenticate("local", {
