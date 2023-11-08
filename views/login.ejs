@@ -1,8 +1,8 @@
 <h1>Login</h1>
 
-<% if (message) { %> <%= message %> <% } %> 
-
-<%# if(title) { %> <%#=title %> <%# } %>
+<% if (message_from_route) { %>
+<p style="color: red"><%= message_from_route %></p>
+<% } %>
 
 <form action="/login" method="POST">
   <div>
